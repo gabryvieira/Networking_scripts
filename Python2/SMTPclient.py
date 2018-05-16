@@ -44,13 +44,11 @@ def sendEmail(smtp, user_email):
             break
 
 
-    while True:
-
-        #sendTo = raw_input("Send email to: ")
-        try:
-            smtp.sendmail(user_email, "nuno.fernandes@altran.com", msg)
-        except smtplib.SMTPRecipientsRefused:
-            print("{} not a valid account!".format(sendTo))
+    sendTo = raw_input("Send email to: ")
+    try:
+        smtp.sendmail(user_email, sendTo, msg)
+    except smtplib.SMTPRecipientsRefused:
+        print("{} not a valid account!".format(sendTo))
 
 if __name__ == '__main__':
     main()

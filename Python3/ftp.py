@@ -1,6 +1,6 @@
 import pexpect
 from IPy import IP
-
+import getpass
 def main():
 
     session = "ftp "
@@ -30,7 +30,7 @@ def initSession(sessionFTP):
     ch = pexpect.spawn(sessionFTP)
     try:
         user = input("User: ")
-        password = input("Password: ")
+        password = getpass.getpass("Password: ")
         ch.expect('Name .*:')
         ch.sendline(user)
         ch.expect('Password:')

@@ -1,5 +1,5 @@
 import smtplib
-
+import getpass
 ### SMTP client to send email from Gmail accounts
 SMTP_PORT = 587
 
@@ -21,8 +21,9 @@ def performLogin(smtp):
             print("Invalid Gmail account!")
         else:
             break
+
     while True:
-        password = input("Password: ")
+        password = getpass.getpass("Password: ")
         if password == "":
             print("Password cannot be empty!")
         else:

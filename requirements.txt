@@ -2,7 +2,7 @@ certifi==2018.4.16
 chardet==3.0.4
 idna==2.6
 IPy==0.83
-numpy==1.14.3
+numpy==1.22.0
 pbkdf2==1.3
 pexpect==4.5.0
 ptyprocess==0.5.2
